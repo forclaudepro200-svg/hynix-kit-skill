@@ -8,7 +8,7 @@ Codex에 "AGENTS.md 생성해"라고 말하면 작업 공간에 아래 파일을
 ## 설치
 
 ```bash
-git clone --depth 1 <이 저장소 URL> /tmp/hynix-kit-skill
+git clone --depth 1 https://github.com/forclaudepro200-svg/hynix-kit-skill /tmp/hynix-kit-skill
 mkdir -p ~/.codex/skills && cp -r /tmp/hynix-kit-skill/skills/hynix-kit ~/.codex/skills/
 ```
 
