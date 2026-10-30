@@ -16,11 +16,13 @@ description: 과제 작업 공간에 AGENTS.md와 협업 문서 골격(INTERVIEW
    ```
    이미 있는 파일은 건드리지 말고, 건너뛴 파일 이름을 보고한다.
 3. README.md가 있으면 읽고 AGENTS.md의 `## 과제 맥락` 주석을 3~5줄 요약으로 바꾼다. README에 없는 요구사항은 지어내지 않는다.
-4. git 저장소가 아니면(`git rev-parse --is-inside-work-tree` 실패) `git init`을 실행한다.
-5. 만든 파일을 커밋한다: `git add AGENTS.md INTERVIEW.md PLAN.md DECISIONS.md HANDOFF.md && git commit -m "setup: 작업 지침과 문서 골격"`
-6. 아래 형식으로 짧게 보고하고 멈춘다.
+4. 런타임을 한 번만 확인해 AGENTS.md `## 환경`의 언어·런타임 주석을 채운다: `node --version; python3 --version` 중 동작하는 것. README가 언어를 지정하면 그것을, 아니면 기존 코드·설정 파일(package.json, requirements.txt)을, 둘 다 없으면 Node를 고르고 테스트 명령(`node --test` 또는 `pytest`)까지 적는다.
+5. git 저장소가 아니면(`git rev-parse --is-inside-work-tree` 실패) `git init`을 실행한다.
+6. 만든 파일을 커밋한다: `git add AGENTS.md INTERVIEW.md PLAN.md DECISIONS.md HANDOFF.md && git commit -m "setup: 작업 지침과 문서 골격"`. 실패하면 오류와 직접 실행할 명령을 보고한다.
+7. 아래 형식으로 짧게 보고하고 멈춘다.
    - 만든 파일 / 건너뛴 파일
    - 과제 맥락 요약(3~5줄)
+   - 선택한 런타임과 테스트 명령
    - 다음 단계: "업무 담당자 인터뷰 → INTERVIEW.md 기록 → PLAN.md 작성"
 
 ## 하지 말 것
