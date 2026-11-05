@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hynix-design 예시</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .hero { background: var(--hx-navy); color: var(--hx-white); padding: 48px 32px 40px; position: relative; }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--hx-gradient); }
+  .hero h1 { margin: 0 0 8px; font-size: 32px; font-weight: 700; }
+  .hero p { margin: 0; color: var(--hx-gray-400); }
+
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 24px; display: grid; gap: 24px; }
+  h2 { font-size: 20px; margin: 0 0 16px; }
+
+  .card { background: var(--hx-white); border: 1px solid var(--hx-line); border-radius: var(--hx-radius); box-shadow: var(--hx-shadow); padding: 24px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .kpi .label { color: var(--hx-ink-3); font-size: 14px; }
+  .kpi .value { font-size: 32px; font-weight: 700; font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .kpi .value.accent { color: var(--hx-red); }
+  .bar { height: 6px; background: var(--hx-surface); border-radius: 3px; margin-top: 12px; overflow: hidden; }
+  .bar > span { display: block; height: 100%; background: var(--hx-gradient); }
+
+  .btn { font: inherit; font-weight: 700; font-size: 16px; padding: 12px 20px; border-radius: var(--hx-radius-sm); border: 1px solid transparent; cursor: pointer; }
+  .btn-primary { background: var(--hx-orange); color: var(--hx-white); }
+  .btn-primary:hover { background: var(--hx-orange-strong); }
+  .btn-secondary { background: var(--hx-white); color: var(--hx-indigo); border-color: var(--hx-indigo); }
+  .btn-secondary:hover { background: var(--hx-indigo-tint); }
+  .btn-ghost { background: transparent; color: var(--hx-ink-2); border-color: var(--hx-line); }
+  .btn:disabled { background: var(--hx-surface); color: var(--hx-gray-400); border-color: var(--hx-line); cursor: not-allowed; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--hx-line); margin-bottom: 16px; }
+  .tab { padding: 12px 0; color: var(--hx-ink-3); border-bottom: 3px solid transparent; }
+  .tab.active { color: var(--hx-ink); font-weight: 700; border-bottom-color: var(--hx-red); }
+
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th { background: var(--hx-surface); color: var(--hx-ink-2); text-align: left; font-weight: 700; }
+  th, td { padding: 12px; border-bottom: 1px solid var(--hx-line); }
+  td.num { text-align: right; }
+
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 13px; font-weight: 700; }
+  .badge.ok { background: var(--hx-success-tint); color: var(--hx-success); }
+  .badge.warn { background: var(--hx-orange-tint); color: #b35500; }
+  .badge.err { background: var(--hx-red-tint); color: var(--hx-danger); }
+
+  footer { background: var(--hx-navy); color: var(--hx-gray-400); padding: 24px 32px; font-size: 14px; }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Fab 수율 모니터링</h1>
+    <p>hynix-design 토큰으로 만든 예시 화면</p>
+  </header>
+
+  <main>
+    <section class="kpis">
+      <div class="card kpi"><div class="label">오늘 수율</div><div class="value accent">97.4%</div><div class="bar"><span style="width:97.4%"></span></div></div>
+      <div class="card kpi"><div class="label">처리 웨이퍼</div><div class="value">12,480</div></div>
+      <div class="card kpi"><div class="label">이상 감지</div><div class="value">3건</div></div>
+    </section>
+
+    <section class="card">
+      <div class="tabs"><span class="tab active">라인별</span><span class="tab">공정별</span><span class="tab">장비별</span></div>
+      <table>
+        <thead><tr><th>라인</th><th>공정</th><th class="num">수율</th><th>상태</th></tr></thead>
+        <tbody>
+          <tr><td>M15</td><td>Etch</td><td class="num">98.1%</td><td><span class="badge ok">정상</span></td></tr>
+          <tr><td>M16</td><td>CMP</td><td class="num">95.6%</td><td><span class="badge warn">주의</span></td></tr>
+          <tr><td>M14</td><td>Litho</td><td class="num">91.2%</td><td><span class="badge err">⚠ 이상</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>버튼</h2>
+      <div class="row">
+        <button class="btn btn-primary">보고서 생성</button>
+        <button class="btn btn-secondary">상세 보기</button>
+        <button class="btn btn-ghost">취소</button>
+        <button class="btn btn-primary" disabled>비활성</button>
+      </div>
+      <p>링크 예시: <a href="#">이상 이력 전체 보기</a></p>
+    </section>
+  </main>
+
+  <footer>© 예시 화면 · 로고 없음</footer>
+</body>
+</html>

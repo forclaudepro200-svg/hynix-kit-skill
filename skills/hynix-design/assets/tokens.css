@@ -1,0 +1,61 @@
+/* hynix-design color tokens
+ * SK Red / SK Orange: SK Group CI
+ * Neutrals & secondary: values used on skhynix.com
+ */
+:root {
+  /* Brand */
+  --hx-red: #ea002c;
+  --hx-orange: #ff7a00;
+  --hx-orange-strong: #ff5a00;
+  --hx-gradient: linear-gradient(135deg, #ea002c 0%, #ff7a00 100%);
+
+  /* Secondary */
+  --hx-indigo: #4747b3;
+  --hx-indigo-strong: #5c51d6;
+  --hx-navy: #161535;
+
+  /* Neutrals */
+  --hx-ink: #212121;
+  --hx-ink-2: #3e3e3e;
+  --hx-ink-3: #666666;
+  --hx-gray-400: #bdbdbd;
+  --hx-line: #e5e5e5;
+  --hx-surface: #f5f5f5;
+  --hx-white: #ffffff;
+
+  /* Status */
+  --hx-success: #069e6d;
+  --hx-danger: #d10025;
+
+  /* Tints (light backgrounds for badges / highlights) */
+  --hx-red-tint: color-mix(in srgb, var(--hx-red) 8%, white);
+  --hx-orange-tint: color-mix(in srgb, var(--hx-orange) 10%, white);
+  --hx-indigo-tint: color-mix(in srgb, var(--hx-indigo) 8%, white);
+  --hx-success-tint: color-mix(in srgb, var(--hx-success) 10%, white);
+
+  /* Charts (series order) */
+  --hx-chart-1: var(--hx-red);
+  --hx-chart-2: var(--hx-orange);
+  --hx-chart-3: var(--hx-indigo);
+  --hx-chart-4: var(--hx-navy);
+  --hx-chart-5: var(--hx-gray-400);
+  --hx-chart-6: var(--hx-success);
+
+  /* Shape */
+  --hx-radius-sm: 4px;
+  --hx-radius: 8px;
+  --hx-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  /* Type */
+  --hx-font: "Pretendard", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: var(--hx-font);
+  color: var(--hx-ink);
+  background: var(--hx-surface);
+}
+a { color: var(--hx-indigo); }
+:focus-visible { outline: 3px solid var(--hx-orange); outline-offset: 2px; }

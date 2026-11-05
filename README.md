@@ -1,6 +1,6 @@
 # hynix-kit (Codex Skills)
 
-180분 실무 과제를 Codex로 진행할 때 쓰는 스킬 6개입니다.
+180분 실무 과제를 Codex로 진행할 때 쓰는 스킬 7개입니다.
 
 | 스킬 | 이렇게 말하면 | 하는 일 |
 |---|---|---|
@@ -10,9 +10,12 @@
 | `hynix-build` | "C0 골격 만들어" / "C2 구현해" | 성공 기준 하나만: 테스트 먼저 → 최소 구현 → 실행 확인 → 커밋 → DECISIONS·HANDOFF 기록 |
 | `hynix-verify` | "검증해" / "제출 점검해" | 테스트 실행, 성공 기준 추적, 거짓 성공 점검, 문서 주장 vs 증거 대조(VERIFY.md) |
 | `hynix-followup` | "서술형 대비해" | 내 코드 기준 예상 질문 6개와 답변 뼈대(FOLLOWUP_PREP.md) |
+| `hynix-design` | "하이닉스 색감으로 디자인해" | 웹 UI에 SK하이닉스 색 토큰(레드·오렌지·차콜·인디고) 적용, CSS·Tailwind·Streamlit 지원 |
 
 ## 권장 순서
 `hynix-kit` → `hynix-deliverables` → `hynix-interview` → (인터뷰·PLAN 합의) → `hynix-build` C0 → C1 → C2 … → `hynix-verify` → `hynix-followup` → 제출
+
+화면이 있는 과제라면 구현 중 언제든 `hynix-design`으로 색감을 맞춥니다.
 
 ## 설치
 
@@ -21,5 +24,5 @@ git clone --depth 1 https://github.com/forclaudepro200-svg/hynix-kit-skill ~/k
 mkdir -p ~/.codex/skills && cp -r ~/k/skills/* ~/.codex/skills/
 ```
 
-Codex를 다시 실행하고 `/skills`에서 6개가 보이는지 확인합니다.
+Codex를 다시 실행하고 `/skills`에서 7개가 보이는지 확인합니다.
 스킬 폴더 위치가 다르면 `/skills`가 보여 주는 경로에 복사합니다.
